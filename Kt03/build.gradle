@@ -6,11 +6,13 @@ plugins {
 group 'net.println'
 version '1.0-SNAPSHOT'
 
+
 sourceCompatibility = 1.8
 
 repositories {
-    mavenCentral()
+//    mavenCentral()
     jcenter()
+    maven{ url'http://maven.aliyun.com/nexus/content/groups/public/'}
 }
 
 dependencies {
