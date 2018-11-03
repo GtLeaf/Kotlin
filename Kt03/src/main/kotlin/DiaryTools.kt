@@ -30,6 +30,6 @@ fun main(args: Array<String>) {
 }
 
 //接收一个非空的String,加上“?”表示参数可以为null
-fun heat(str:String):String{
+fun heat(str:String?):String{
     return "热${str}"
 }
