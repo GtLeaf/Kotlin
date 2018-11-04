@@ -20,6 +20,14 @@ ${placeName}${numToChinese(placeName.length)}个鎏金大字。
 }
 
 fun main(args: Array<String>) {
-    var diaryTools2 = DiaryTools2()
-    println(diaryTools2.diaryGenerater("颐和园"))
+    /*var diaryTools2 = DiaryTools2()
+    println(diaryTools2.diaryGenerater("颐和园"))*/
+    //函数式表达式
+    var i = {x:Int, y:Int -> x+y}
+    var j:(Int, Int)->Int = {x,y -> x+y}
+    println(add(3,5))
+    println(i(3,4))
+    println(j(2,4))
 }
+
+fun add (x:Int, y:Int):Int = x+y
