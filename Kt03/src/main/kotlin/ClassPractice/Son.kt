@@ -5,4 +5,5 @@ class Son : Father(){
     override fun action(){
         println("很乖，在公共场合很有礼貌")
     }
+
 }
