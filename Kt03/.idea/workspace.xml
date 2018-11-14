@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0b5b0e80-c3f7-4015-a314-5459ca663dd2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ClassPractice/Son.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ClassPractice/Son.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ClassPractice/Test.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ClassPractice/Test.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -41,18 +39,18 @@
     <session id="1665741673">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="20" />
+          <entry key="project.closed" value="22" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="5" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.6" value="5" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="3" />
-          <entry key="project.opened" value="22" />
+          <entry key="project.opened" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -62,7 +60,7 @@
           <entry key="gradle" value="3" />
           <entry key="iml" value="1" />
           <entry key="java" value="8" />
-          <entry key="kt" value="19" />
+          <entry key="kt" value="23" />
           <entry key="properties" value="1" />
           <entry key="txt" value="1" />
           <entry key="xml" value="4" />
@@ -74,7 +72,7 @@
           <entry key="Groovy" value="3" />
           <entry key="IDEA_MODULE" value="1" />
           <entry key="JAVA" value="8" />
-          <entry key="Kotlin" value="19" />
+          <entry key="Kotlin" value="23" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Properties" value="1" />
           <entry key="XML" value="4" />
@@ -84,14 +82,14 @@
         <counts>
           <entry key="gradle" value="81" />
           <entry key="java" value="86" />
-          <entry key="kt" value="4253" />
+          <entry key="kt" value="4407" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="81" />
           <entry key="JAVA" value="86" />
-          <entry key="Kotlin" value="4253" />
+          <entry key="Kotlin" value="4407" />
         </counts>
       </usages-collector>
     </session>
@@ -99,25 +97,25 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/ClassPractice/WashMachine.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/ClassPractice/Test.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1484">
-              <caret line="53" column="11" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
+            <state relative-caret-position="140">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/ClassPractice/Father.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/Abstract/Human.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="112">
-              <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+              <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/ClassPractice/Test.kt">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/Abstract/Man.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="168">
               <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
@@ -126,19 +124,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/ClassPractice/Son.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/Abstract/Woman.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="112">
+              <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/ClassPractice/WashCloth.kt">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/Abstract/Test.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+            <state relative-caret-position="196">
+              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -151,8 +149,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="868">
-              <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+            <state relative-caret-position="812">
+              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -565,6 +563,10 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/ClassPractice/Father.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/ClassPractice/Son.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/ClassPractice/Test.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/Abstract/Human.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/Abstract/Man.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/Abstract/Woman.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/Abstract/Test.kt" />
       </list>
     </option>
   </component>
@@ -580,10 +582,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="642" />
-    <option name="width" value="1403" />
-    <option name="height" value="1103" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-72" />
+    <option name="y" value="11" />
+    <option name="width" value="1123" />
+    <option name="height" value="883" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -645,7 +648,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="ClassPractice" type="462c0819:PsiDirectoryNode" />
+              <item name="Abstract" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -657,7 +660,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542123458432" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542206795634" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -665,13 +668,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Study\Kotlin\Kt03\src\main\kotlin" />
-      <recent name="D:\Study\Kotlin\Kt03\src\main\java\InternetDemo" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Study\Kotlin\Kt03\src\main\kotlin" />
       <recent name="D:\Study\Kotlin\Kt03\src\main" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="Abstract" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Study\Kotlin\Kt03\src\main\kotlin" />
+      <recent name="D:\Study\Kotlin\Kt03\src\main\java\InternetDemo" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -686,7 +692,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.ClassPractice.TestKt">
+  <component name="RunManager" selected="Kotlin.Abstract.TestKt">
+    <configuration name="Abstract.TestKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="Kt03_main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Abstract.TestKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CalcDemoKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="Kt03_main" />
       <option name="VM_PARAMETERS" />
@@ -739,33 +758,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DiaryTools2Kt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="Kt03_main" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="DiaryTools2Kt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Kotlin.DiaryTools2Kt" />
       <item itemvalue="Kotlin.CalcDemoKt" />
       <item itemvalue="Kotlin.ClassPractice.RectKt" />
       <item itemvalue="Kotlin.ClassPractice.WashClothKt" />
       <item itemvalue="Kotlin.ClassPractice.TestKt" />
+      <item itemvalue="Kotlin.Abstract.TestKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.Abstract.TestKt" />
         <item itemvalue="Kotlin.ClassPractice.TestKt" />
         <item itemvalue="Kotlin.ClassPractice.WashClothKt" />
         <item itemvalue="Kotlin.ClassPractice.RectKt" />
         <item itemvalue="Kotlin.CalcDemoKt" />
-        <item itemvalue="Kotlin.DiaryTools2Kt" />
       </list>
     </recent_temporary>
   </component>
@@ -783,18 +789,18 @@
       <workItem from="1542008201196" duration="88000" />
       <workItem from="1542008326741" duration="697000" />
       <workItem from="1542030320512" duration="3083000" />
-      <workItem from="1542123382769" duration="76000" />
+      <workItem from="1542123382769" duration="675000" />
+      <workItem from="1542205821967" duration="975000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4180000" />
+    <option name="totallyTimeSpent" value="5754000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-57" y="9" width="898" height="706" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1300268" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16785714" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -803,7 +809,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3248227" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32460734" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -812,7 +818,7 @@
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50067025" side_tool="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Build" order="10" sideWeight="0.49932975" weight="0.13900709" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3248227" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32460734" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -956,6 +962,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ClassPractice/Son.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/ClassPractice/WashCloth.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -968,8 +981,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="868">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        <state relative-caret-position="812">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -990,17 +1003,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ClassPractice/Son.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ClassPractice/Test.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="140">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/ClassPractice/Test.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Abstract/Human.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Abstract/Man.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Abstract/Woman.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Abstract/Test.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
         </state>
       </provider>
     </entry>
