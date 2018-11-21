@@ -8,6 +8,7 @@ object FaceDetectUtil {
     val API_KEY  = "QsMSFvk4phCqlxdvlDCTYBvi"
     val SECRET_KEY  = "m9fqMZiLqeRnI7KZTVvucky9azasfERE"
     val client = AipFace(APP_ID, API_KEY, SECRET_KEY)
+    val emptyOption = HashMap<String, String>()
 
     val IMAGE_TYPE_BASE64 = "BASE64"
 
@@ -37,6 +38,12 @@ object FaceDetectUtil {
         }*/
         return client.addUser(toBase64(path), IMAGE_TYPE_BASE64, groupId, userId, options)
     }
+
+    //人脸更新
+    fun updateUser(path: String, groupId: String, userId: String, options: HashMap<String, String>):JSONObject{
+        return client.updateUser(toBase64(path), IMAGE_TYPE_BASE64, groupId, userId, options);
+    }
+
     //人脸搜索
     fun search(path:String, groupIdList:String, options: HashMap<String, String>):JSONObject{
         return client.search(toBase64(path), IMAGE_TYPE_BASE64, groupIdList, options)

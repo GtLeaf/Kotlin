@@ -16,7 +16,8 @@ fun main(args: Array<String>) {
 //    println(FaceDetectUtil.detect("img/clown_girl.jpg", options).toString(2))
 //    println(FaceDetectUtil.addUser("img/clown_girl.jpg", "test_group", "clown_gril", options).toString())
 //    println(FaceDetectUtil.getGroupUsers("test_group", emptyOptions))
-    println(FaceDetectUtil.search("img/clown_girl.jpg","test_group", emptyOptions))
+//    println(FaceDetectUtil.search("img/clown_girl.jpg","test_group", emptyOptions))
+    println(FaceDetectUtil.updateUser("img/clown_girl.jpg", "test_group", "clown_gril", FaceDetectUtil.emptyOption))
 
     //检测文件是否存在
     /*var filename = "img/matthew.jpg"
