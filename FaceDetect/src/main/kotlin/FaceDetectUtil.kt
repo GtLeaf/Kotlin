@@ -68,4 +68,8 @@ object FaceDetectUtil {
     fun getGroupUsers(groupId:String, options: HashMap<String, String>):JSONObject{
         return client.getGroupUsers(groupId, options);
     }
+    //用户信息查询
+    fun getUser(userId: String, groupId: String, options: HashMap<String, String>):JSONObject{
+       return client.getUser(userId, groupId, options)
+    }
 }
