@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da227b68-201b-43a5-acd8-712da266ca69" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/FaceDetectUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/FaceDetectUtil.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Kt03/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Kt03/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Compiler/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Compiler/.idea/modules/Compiler_main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Compiler/.idea/modules/Compiler_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Compiler/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Compiler/src/main/kotlin/LexicalAnalyzer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -72,11 +76,12 @@
     <session id="-923966258">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -123,8 +128,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/FaceDetectUtil.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="67" column="33" lean-forward="true" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
+            <state relative-caret-position="412">
+              <caret line="72" column="28" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -132,8 +137,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/Test.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+            <state relative-caret-position="476">
+              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
               <folding>
                 <element signature="e#0#137#0" expanded="true" />
               </folding>
@@ -622,11 +627,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="98" />
-    <option name="y" value="1" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="97" />
     <option name="width" value="1075" />
-    <option name="height" value="1039" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -736,12 +740,13 @@
       <updated>1542692814572</updated>
       <workItem from="1542692816148" duration="8915000" />
       <workItem from="1542809127209" duration="999000" />
-      <workItem from="1542900502819" duration="275000" />
+      <workItem from="1542900502819" duration="938000" />
+      <workItem from="1542972609088" duration="925000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10189000" />
+    <option name="totallyTimeSpent" value="11777000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -753,10 +758,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-21" y="0" width="860" height="831" extended-state="0" />
+    <frame x="78" y="0" width="860" height="832" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1296758" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13216957" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -805,6 +810,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Test.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.51/649a609725b857dd285cf69d49d4f1f77335076e/kotlin-stdlib-1.2.51-sources.jar!/kotlin/io/Console.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1960">
@@ -826,20 +841,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Test.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#137#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/FaceDetectUtil.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="67" column="33" lean-forward="true" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
+        <state relative-caret-position="412">
+          <caret line="72" column="28" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="28" />
         </state>
       </provider>
     </entry>
