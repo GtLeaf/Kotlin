@@ -1,4 +1,7 @@
+import lexicalAnalyzer.LexicalAnalyzer
+
 fun main(args: Array<String>) {
-    var char: Char = 'a'
-    println()
+    var lexicalAnalyzer = LexicalAnalyzer("code.txt")
+//    var token = "class"
+//    println(token.equals("class"))
 }
