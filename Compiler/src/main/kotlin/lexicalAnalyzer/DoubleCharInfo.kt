@@ -5,7 +5,10 @@ class DoubleCharInfo(ch:Int, rowNumber:Int, colNumber:Int){
     var local = CharLocal.UNKNOW
     var rowNumber = 0
     var colNumber = 0
-    var isLeft = true
+
+    companion object {
+        var isLeft = true
+    }
 
     enum class DoubleCharType{
         BRACES,     //大括号

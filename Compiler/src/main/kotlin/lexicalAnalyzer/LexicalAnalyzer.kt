@@ -2,6 +2,7 @@ package lexicalAnalyzer
 
 import java.io.BufferedReader
 import java.io.File
+import kotlin.system.exitProcess
 
 class LexicalAnalyzer(fileName:String) {
     var ch_index = -1
@@ -20,7 +21,10 @@ class LexicalAnalyzer(fileName:String) {
     //判断成对的符号栈
     var doubleDelimiterStack = mutableListOf<DoubleCharInfo>()
     //用于输出
+    //保留字列表
     var retainWordList = mutableListOf<TokenInfo>()
+    //常整数
+    var constantInteger = mutableListOf<TokenInfo>()
 
     enum class Charactor{
         BLANK,
@@ -35,6 +39,7 @@ class LexicalAnalyzer(fileName:String) {
     }
     enum class TokenType{
         RETAIN_WORD,
+        CONSTANT_INTEGER,
         IDENTIFIER
     }
 
@@ -50,6 +55,18 @@ class LexicalAnalyzer(fileName:String) {
         mCh = br.read()
         colNumber += 1
         while (mCh != -1){
+
+            //计算每个字符所在的位置
+            if (9 == mCh){//制表符一般为4个空格
+                colNumber += 9
+            }else if(10 == mCh){    //回车键
+                colNumber = 0
+                rowNumber += 1
+            }else{
+                colNumber += 1
+            }
+
+
             //分词
             when(charJudge(mCh)){
                 //空格
@@ -87,34 +104,33 @@ class LexicalAnalyzer(fileName:String) {
                 LexicalAnalyzer.Charactor.DOUBLE_DELIMITER -> {
                     distinguish()
                     var delimiter = DoubleCharInfo(mCh, rowNumber, colNumber)
+                    //如果是左括号则入栈，如果是右括号要做若干处理
                     if (delimiter.local == DoubleCharInfo.CharLocal.LEFT){
                         doubleDelimiterStack.add(delimiter)
                     }else if (delimiter.local == DoubleCharInfo.CharLocal.RIGHT) {
-                        for (leftDelimiter in doubleDelimiterStack){
-                            leftDelimiter.type == delimiter.type
-                            doubleDelimiterStack.remove(delimiter)
+                        //如果右括号和最近的一个左括号不匹配，则报错
+                        var bool = doubleDelimiterStack.get(doubleDelimiterStack.size-1).type == delimiter.type
+                        if (doubleDelimiterStack.get(doubleDelimiterStack.size-1).type != delimiter.type){
+                            errorExit("缺少括号(${delimiter.rowNumber}, ${delimiter.colNumber})")
                         }
+                        doubleDelimiterStack.removeAt(doubleDelimiterStack.size-1)
                     }
                 }
                 //其他字符
                 LexicalAnalyzer.Charactor.OTHER -> {}
             }
 
-            //计算每个字符所在的位置
-            if (9 == mCh){//制表符一般为4个空格
-                colNumber += 9
-            }else if(10 == mCh){    //回车键
-                colNumber = 0
-                rowNumber += 1
-            }else{
-                colNumber += 1
-            }
 
             mCh = br.read()
             var str:Char = mCh.toChar()
             //保留前一个字符，用于判断注释
             mPre_ch = mCh
         }
+    }
+    //出错退出
+    fun errorExit(msg:String){
+        println(msg)
+        exitProcess(1)
     }
 
     //判断是否是空格
@@ -257,15 +273,37 @@ class LexicalAnalyzer(fileName:String) {
         }
         return false
     }
+    //是否数字常量
+    fun isConstantInteger(token:String):Boolean{
+        //首字母不是数字，就肯定不是数字
+        if(!isDigit(token[0].toInt())){
+            return false
+        }
+        var isFirst = true
+        for (word in token){
+            //以数字开头，但包含字母，既不是标识符，也不是数字，报错
+            if (isFirst){
+                isFirst = false
+            }
+            if (!isDigit(word.toInt()))
+                errorExit("标识符不符合命名规则(${rowNumber}, ${colNumber})")
+        }
+        return true
+    }
     //判断token
     fun tokenJudge(token:String): LexicalAnalyzer.TokenType {
         if (isRetainWord(token)){
             return LexicalAnalyzer.TokenType.RETAIN_WORD
         }
+        if (isConstantInteger(token)){
+            return LexicalAnalyzer.TokenType.CONSTANT_INTEGER
+        }
         return LexicalAnalyzer.TokenType.IDENTIFIER
     }
     //识别单词
     fun distinguish(){
+        if (token.isEmpty())
+            return
         when(tokenJudge(token.toString())){
             //保留字
             LexicalAnalyzer.TokenType.RETAIN_WORD ->{
@@ -274,10 +312,12 @@ class LexicalAnalyzer(fileName:String) {
             }
             //标识符
             LexicalAnalyzer.TokenType.IDENTIFIER ->{
-                if (token.isEmpty()){
-                    return
-                }
                 identifier.add(token.toString())
+                token.delete(0, token.length)
+            }
+        //常整数
+            LexicalAnalyzer.TokenType.CONSTANT_INTEGER -> {
+                constantInteger.add(lexicalAnalyzer.TokenInfo(token.toString(), "常整数"))
                 token.delete(0, token.length)
             }
         }
