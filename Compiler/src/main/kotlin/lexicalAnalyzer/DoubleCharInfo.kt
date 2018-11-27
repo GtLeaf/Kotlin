@@ -1,6 +1,7 @@
 package lexicalAnalyzer
 
 class DoubleCharInfo(ch:Int, rowNumber:Int, colNumber:Int){
+    var tokenValue = ""
     var type = DoubleCharType.UNKNOW
     var local = CharLocal.UNKNOW
     var rowNumber = 0
@@ -60,18 +61,11 @@ class DoubleCharInfo(ch:Int, rowNumber:Int, colNumber:Int){
             //双引号
             34 -> {
                 this.type = DoubleCharType.DOUBLE_QUOTATION_MARKS
-                if (isLeft){
-                    //左括号
-                    this.local = CharLocal.LEFT
-                    isLeft = false
-                }else{
-                    //右括号
-                    this.local = CharLocal.RIGHT
-                    isLeft = true
-                }
+                this.local = CharLocal.LEFT
             }
         }
         this.rowNumber = rowNumber
         this.colNumber = colNumber
+        this.tokenValue = ch.toChar().toString()
     }
 }

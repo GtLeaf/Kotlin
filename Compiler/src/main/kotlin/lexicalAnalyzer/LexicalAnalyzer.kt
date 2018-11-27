@@ -1,5 +1,7 @@
 package lexicalAnalyzer
 
+import com.sun.org.apache.xpath.internal.operations.Bool
+import jdk.nashorn.internal.parser.Token
 import java.io.BufferedReader
 import java.io.File
 import kotlin.system.exitProcess
@@ -24,7 +26,9 @@ class LexicalAnalyzer(fileName:String) {
     //保留字列表
     var retainWordList = mutableListOf<TokenInfo>()
     //常整数
-    var constantInteger = mutableListOf<TokenInfo>()
+    var constantIntegerList = mutableListOf<TokenInfo>()
+    //单元运算符
+    var singleRelopList = mutableListOf<TokenInfo>()
 
     enum class Charactor{
         BLANK,
@@ -45,9 +49,20 @@ class LexicalAnalyzer(fileName:String) {
 
     init {
         val file = File(fileName)
-        val bytes: ByteArray = file.readBytes()
         val br: BufferedReader = file.bufferedReader()
         readFile(br)
+    }
+    //处理字符串
+    fun dealString(ch: Int, br: BufferedReader):Boolean{
+        if (34 != ch){
+            return false
+        }
+        while (true){
+            if (br.read() == 34){
+                break
+            }
+        }
+        return true
     }
 
     fun readFile(br: BufferedReader){
@@ -90,7 +105,9 @@ class LexicalAnalyzer(fileName:String) {
                     //识别之前读到的字符串
                     distinguish()
                     //如果ch是'/'，则可能是注释，处理注释
-                    dealAnnotate(mPre_ch, mCh, br)
+                    if (!dealAnnotate(mPre_ch, mCh, br)){
+                        singleRelopList.add(TokenInfo(mCh.toChar().toString(), "单元运算符"))
+                    }
                 }
                 //二元运算符
                 LexicalAnalyzer.Charactor.DOUBLE_RELOP -> {
@@ -109,10 +126,15 @@ class LexicalAnalyzer(fileName:String) {
                         doubleDelimiterStack.add(delimiter)
                     }else if (delimiter.local == DoubleCharInfo.CharLocal.RIGHT) {
                         //如果右括号和最近的一个左括号不匹配，则报错
-                        var bool = doubleDelimiterStack.get(doubleDelimiterStack.size-1).type == delimiter.type
-                        if (doubleDelimiterStack.get(doubleDelimiterStack.size-1).type != delimiter.type){
-                            errorExit("缺少括号(${delimiter.rowNumber}, ${delimiter.colNumber})")
+                        var lastDelimiterStack = doubleDelimiterStack.get(doubleDelimiterStack.size-1)
+                        if (lastDelimiterStack.type != delimiter.type){
+                            errorExit("缺少${lastDelimiterStack.tokenValue}(${delimiter.rowNumber}, ${delimiter.colNumber})")
                         }
+                        //将末尾左括号弹栈
+                        doubleDelimiterStack.removeAt(doubleDelimiterStack.size-1)
+                    }
+                    if(dealString(mCh, br)){
+                        //将左引号弹栈
                         doubleDelimiterStack.removeAt(doubleDelimiterStack.size-1)
                     }
                 }
@@ -122,11 +144,12 @@ class LexicalAnalyzer(fileName:String) {
 
 
             mCh = br.read()
-            var str:Char = mCh.toChar()
             //保留前一个字符，用于判断注释
             mPre_ch = mCh
         }
+        println("编译通过")
     }
+
     //出错退出
     fun errorExit(msg:String){
         println(msg)
@@ -197,7 +220,7 @@ class LexicalAnalyzer(fileName:String) {
         return ch == 95
     }
     //是否是注释
-    fun dealAnnotate(pre_ch: Int, ch: Int,  br: BufferedReader){
+    fun dealAnnotate(pre_ch: Int, ch: Int,  br: BufferedReader):Boolean{
         //如果这两个字符是'/*'，则判断为注释的开始
         if(47 == pre_ch && 42 == ch){
             while (true){
@@ -210,6 +233,7 @@ class LexicalAnalyzer(fileName:String) {
                     break
                 }
             }
+            return true
         }
         //如果是'//'，则为单行注释
         if (47 == pre_ch && 47 == ch){
@@ -223,7 +247,9 @@ class LexicalAnalyzer(fileName:String) {
                     break
                 }
             }
+            return  true
         }
+        return false
     }
     //判断每个字符
     fun charJudge(ch: Int): LexicalAnalyzer.Charactor {
@@ -317,7 +343,7 @@ class LexicalAnalyzer(fileName:String) {
             }
         //常整数
             LexicalAnalyzer.TokenType.CONSTANT_INTEGER -> {
-                constantInteger.add(lexicalAnalyzer.TokenInfo(token.toString(), "常整数"))
+                constantIntegerList.add(lexicalAnalyzer.TokenInfo(token.toString(), "常整数"))
                 token.delete(0, token.length)
             }
         }
