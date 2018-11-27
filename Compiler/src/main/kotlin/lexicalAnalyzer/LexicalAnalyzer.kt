@@ -1,7 +1,5 @@
 package lexicalAnalyzer
 
-import com.sun.org.apache.xpath.internal.operations.Bool
-import jdk.nashorn.internal.parser.Token
 import java.io.BufferedReader
 import java.io.File
 import kotlin.system.exitProcess
@@ -28,7 +26,9 @@ class LexicalAnalyzer(fileName:String) {
     //常整数
     var constantIntegerList = mutableListOf<TokenInfo>()
     //单元运算符
-    var singleRelopList = mutableListOf<TokenInfo>()
+    var relopList = mutableListOf<TokenInfo>()
+    //界定符数组
+    var delimiterList = mutableListOf<TokenInfo>()
 
     enum class Charactor{
         BLANK,
@@ -63,6 +63,36 @@ class LexicalAnalyzer(fileName:String) {
             }
         }
         return true
+    }
+
+    //输出到文件
+    fun printToFile(){
+        //输出到项目根目录,界定符栈最终为空栈，不必输出
+        var retainWordFile = File("保留字列表.txt")
+        retainWordFile.writeText("关键字：\r\n")
+        val retainWordIndex = retainWordList.iterator()
+
+        var constantIntegerFile = File("常整数列表.txt")
+        constantIntegerFile.writeText("常整数列表：\r\n")
+        val constantIntegerIndex = constantIntegerList.iterator()
+
+        var relopFile = File("运算符列表.txt")
+        relopFile.writeText("运算符列表：\r\n")
+        val relopIndex = relopList.iterator()
+
+
+        while (true){
+            if (retainWordIndex.hasNext()){
+                retainWordFile.appendText("${retainWordIndex.next().token}\r\n")
+            }else
+            if (constantIntegerIndex.hasNext()){
+                constantIntegerFile.appendText("${constantIntegerIndex.next().token}\r\n")
+            }else
+            if (relopIndex.hasNext()){
+                relopFile.appendText("${relopIndex.next().token}\r\n")
+            }else
+                break
+        }
     }
 
     fun readFile(br: BufferedReader){
@@ -104,14 +134,21 @@ class LexicalAnalyzer(fileName:String) {
                 LexicalAnalyzer.Charactor.SINGLE_RELOP -> {
                     //识别之前读到的字符串
                     distinguish()
-                    //如果ch是'/'，则可能是注释，处理注释
-                    if (!dealAnnotate(mPre_ch, mCh, br)){
-                        singleRelopList.add(TokenInfo(mCh.toChar().toString(), "单元运算符"))
+                    //如果mPre_ch'/'，则可能是注释，处理注释
+                    if (dealAnnotate(mPre_ch, mCh, br)){
+                        delimiterList.add(TokenInfo(mCh.toChar().toString(), "界定符"))
+                    }else{
+                        //如果不是注释,则可能是运算符
+                        relopList.add(TokenInfo(mCh.toChar().toString(), "单元运算符"))
                     }
                 }
                 //二元运算符
                 LexicalAnalyzer.Charactor.DOUBLE_RELOP -> {
                     distinguish()
+                    //二元运算符是有两个单元运算符组成，所以将前一个单元运算符弹栈。由于先判断双元运算符，再判断单元，故第二个单元运算符不会入栈
+                    relopList.removeAt(relopList.size-1)
+                    relopList.add(TokenInfo(mPre_ch.toChar().toString()+mCh.toChar(), "二元运算符"))
+
                 }
                 //单界定符
                 LexicalAnalyzer.Charactor.SINGLE_DELIMITER -> {
@@ -142,12 +179,13 @@ class LexicalAnalyzer(fileName:String) {
                 LexicalAnalyzer.Charactor.OTHER -> {}
             }
 
-
-            mCh = br.read()
             //保留前一个字符，用于判断注释
             mPre_ch = mCh
+            mCh = br.read()
+
         }
         println("编译通过")
+        printToFile()
     }
 
     //出错退出
@@ -175,8 +213,9 @@ class LexicalAnalyzer(fileName:String) {
     }
     //判断是否是双运算
     fun isDoubleRelop(ch:Int):Boolean{
+        var str = mPre_ch.toChar().toString()+mCh.toChar()
         for (single in doubleRelop){
-            if (single.equals(ch.toChar())){
+            if (single.equals(str)){
                 return true
             }
         }
@@ -257,21 +296,21 @@ class LexicalAnalyzer(fileName:String) {
         if (isBlank(ch)){
             return LexicalAnalyzer.Charactor.BLANK
         }
-        //单运算符
-        if (isSingleRelop(ch)){
-            return LexicalAnalyzer.Charactor.SINGLE_RELOP
-        }
         //双运算符
         if (isDoubleRelop(ch)){
             return LexicalAnalyzer.Charactor.DOUBLE_RELOP
         }
-        //单界定符
-        if (isSingleDelimiter(ch)){
-            return LexicalAnalyzer.Charactor.SINGLE_DELIMITER
+        //单运算符
+        if (isSingleRelop(ch)){
+            return LexicalAnalyzer.Charactor.SINGLE_RELOP
         }
         //双界定符
         if (isDoubleDelimiter(ch)){
             return LexicalAnalyzer.Charactor.DOUBLE_DELIMITER
+        }
+        //单界定符
+        if (isSingleDelimiter(ch)){
+            return LexicalAnalyzer.Charactor.SINGLE_DELIMITER
         }
         //数字
         if (isDigit(ch)){
@@ -341,7 +380,7 @@ class LexicalAnalyzer(fileName:String) {
                 identifier.add(token.toString())
                 token.delete(0, token.length)
             }
-        //常整数
+            //常整数
             LexicalAnalyzer.TokenType.CONSTANT_INTEGER -> {
                 constantIntegerList.add(lexicalAnalyzer.TokenInfo(token.toString(), "常整数"))
                 token.delete(0, token.length)

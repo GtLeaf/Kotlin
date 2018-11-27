@@ -2,7 +2,7 @@ class Test{
 	public static void main(String agrs[]){
 		int a =1;
 		int b=2;
-		if(a>b){
+		if(a>=b){
 			println("a>b")
 		}else{
 			println("a<b")
