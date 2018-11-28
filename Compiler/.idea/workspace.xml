@@ -24,7 +24,7 @@
     <session id="-147474418">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.9" value="3" />
@@ -48,13 +48,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="37" />
-          <entry key="kt" value="5951" />
+          <entry key="kt" value="5966" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Kotlin" value="5951" />
+          <entry key="Kotlin" value="5966" />
           <entry key="PLAIN_TEXT" value="38" />
         </counts>
       </usages-collector>
@@ -65,8 +65,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/lexicalAnalyzer/LexicalAnalyzer.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="91" column="66" selection-start-line="91" selection-start-column="66" selection-end-line="91" selection-end-column="66" />
+            <state relative-caret-position="303">
+              <caret line="93" column="21" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
               <folding>
                 <element signature="e#25#107#0" expanded="true" />
               </folding>
@@ -657,12 +657,12 @@
       <workItem from="1543238263973" duration="58000" />
       <workItem from="1543290248261" duration="4827000" />
       <workItem from="1543306302912" duration="18000" />
-      <workItem from="1543317989576" duration="4401000" />
+      <workItem from="1543317989576" duration="4950000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47960000" />
+    <option name="totallyTimeSpent" value="48509000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -674,7 +674,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25268096" />
@@ -686,7 +686,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32765958" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32765958" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.34042552" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -752,13 +752,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/lexicalAnalyzer/LexicalAnalyzer.kt</url>
-          <line>191</line>
+          <line>192</line>
           <properties />
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/lexicalAnalyzer/LexicalAnalyzer.kt</url>
-          <line>185</line>
+          <line>186</line>
           <properties />
           <option name="timeStamp" value="48" />
         </line-breakpoint>
@@ -871,8 +871,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/lexicalAnalyzer/LexicalAnalyzer.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="91" column="66" selection-start-line="91" selection-start-column="66" selection-end-line="91" selection-end-column="66" />
+        <state relative-caret-position="303">
+          <caret line="93" column="21" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
           <folding>
             <element signature="e#25#107#0" expanded="true" />
           </folding>
