@@ -386,6 +386,5 @@ class LexicalAnalyzer(fileName:String) {
                 token.delete(0, token.length)
             }
         }
-
     }
 }
