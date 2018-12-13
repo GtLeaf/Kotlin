@@ -2,7 +2,26 @@ package IfYouAreTheOne
 
 fun main(args: Array<String>) {
 //    getMaxAge2()
-    filerData()
+    countOption()
+}
+
+fun mapOption(){
+    println(GirlDatabase.map {
+        "${it.name} : ${it.age}"
+    })
+}
+
+fun countOption(){
+    println(GirlDatabase.count {
+        it.age > 18
+    })
+}
+
+//是否存在
+fun anyOption(){
+    println(GirlDatabase.any{
+        it.age == 18
+    })
 }
 
 fun filerData(){
