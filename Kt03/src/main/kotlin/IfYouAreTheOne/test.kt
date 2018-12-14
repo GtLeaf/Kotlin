@@ -2,7 +2,21 @@ package IfYouAreTheOne
 
 fun main(args: Array<String>) {
 //    getMaxAge2()
-    countOption()
+    groupBy()
+}
+
+//分组
+fun groupBy(){
+    println(GirlDatabase.groupBy {
+        it.address
+    })
+}
+
+//返回符合条件的第一个
+fun findOption(){
+    println(GirlDatabase.find {
+        it.address == "广东"
+    })
 }
 
 fun mapOption(){
