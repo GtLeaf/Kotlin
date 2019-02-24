@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b5b0e80-c3f7-4015-a314-5459ca663dd2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../FaceDetect/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FaceDetect/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Kotlin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Kotlin/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/IfYouAreTheOne/test.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/IfYouAreTheOne/test.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/IfYouAreTheOne/Girl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/IfYouAreTheOne/Girl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/IfYouAreTheOne/Stage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/IfYouAreTheOne/Stage.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -40,12 +43,12 @@
     <session id="1665741673">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="38" />
+          <entry key="project.closed" value="40" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="8" />
           <entry key="project.open.time.11" value="4" />
           <entry key="project.open.time.12" value="4" />
-          <entry key="project.open.time.13" value="2" />
+          <entry key="project.open.time.13" value="3" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="1" />
@@ -54,8 +57,8 @@
           <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.6" value="5" />
           <entry key="project.open.time.7" value="2" />
-          <entry key="project.open.time.8" value="3" />
-          <entry key="project.opened" value="39" />
+          <entry key="project.open.time.8" value="4" />
+          <entry key="project.opened" value="41" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -65,7 +68,7 @@
           <entry key="gradle" value="3" />
           <entry key="iml" value="1" />
           <entry key="java" value="11" />
-          <entry key="kt" value="41" />
+          <entry key="kt" value="44" />
           <entry key="properties" value="1" />
           <entry key="txt" value="1" />
           <entry key="xml" value="4" />
@@ -77,7 +80,7 @@
           <entry key="Groovy" value="3" />
           <entry key="IDEA_MODULE" value="1" />
           <entry key="JAVA" value="11" />
-          <entry key="Kotlin" value="41" />
+          <entry key="Kotlin" value="44" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Properties" value="1" />
           <entry key="XML" value="4" />
@@ -87,52 +90,52 @@
         <counts>
           <entry key="gradle" value="84" />
           <entry key="java" value="110" />
-          <entry key="kt" value="6288" />
+          <entry key="kt" value="6498" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="84" />
           <entry key="JAVA" value="110" />
-          <entry key="Kotlin" value="6288" />
+          <entry key="Kotlin" value="6498" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/IfYouAreTheOne/Girl.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/IfYouAreTheOne/Stage.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            <state relative-caret-position="395">
+              <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/IfYouAreTheOne/test.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="196">
-              <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://D:/JAVA8/src.zip!/javax/imageio/ImageIO.java">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/faceDetect/FaceDetectUtil.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41076">
-              <caret line="1563" column="26" selection-start-line="1563" selection-start-column="26" selection-end-line="1563" selection-end-column="26" />
+            <state relative-caret-position="112">
+              <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/IfYouAreTheOne/Girl.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="46" column="34" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -158,8 +161,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1176">
-              <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+            <state relative-caret-position="1288">
+              <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -590,9 +593,9 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/SealedClass/Test.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/SealedClass/Son.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/Image/ImageTest.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/IfYouAreTheOne/Stage.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/IfYouAreTheOne/Girl.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/IfYouAreTheOne/test.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/IfYouAreTheOne/Girl.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/IfYouAreTheOne/Stage.kt" />
       </list>
     </option>
   </component>
@@ -609,10 +612,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-45" />
-    <option name="y" value="5" />
-    <option name="width" value="1070" />
-    <option name="height" value="1040" />
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -642,6 +644,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -675,18 +678,25 @@
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
               <item name="IfYouAreTheOne" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Kt03" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Kt03" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="Image" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544713494054" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551017960984" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -719,7 +729,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.IfYouAreTheOne.TestKt">
+  <component name="RunManager" selected="Kotlin.IfYouAreTheOne.StageKt">
     <configuration name="Agency.TextKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="Kt03_main" />
       <option name="VM_PARAMETERS" />
@@ -794,8 +804,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.IfYouAreTheOne.TestKt" />
         <item itemvalue="Kotlin.IfYouAreTheOne.StageKt" />
+        <item itemvalue="Kotlin.IfYouAreTheOne.TestKt" />
         <item itemvalue="Kotlin.Image.ImageTestKt" />
         <item itemvalue="Kotlin.SealedClass.TestKt" />
         <item itemvalue="Kotlin.Agency.TextKt" />
@@ -834,17 +844,19 @@
       <workItem from="1544540508430" duration="1113000" />
       <workItem from="1544713038419" duration="460000" />
       <workItem from="1544799896228" duration="602000" />
+      <workItem from="1545124162357" duration="136000" />
+      <workItem from="1551013488455" duration="3682000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27575000" />
+    <option name="totallyTimeSpent" value="31393000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-36" y="4" width="856" height="832" extended-state="0" />
+    <frame x="-6" y="0" width="781" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.00877193" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3582296" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -853,7 +865,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3190272" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32137734" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -862,7 +874,7 @@
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50067025" side_tool="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Build" order="10" sideWeight="0.49932975" weight="0.13900709" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3190272" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.31707317" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -883,13 +895,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-core-api-4.8.jar!/org/gradle/api/Project.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1174">
-          <caret line="83" column="21" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/wrapper/dists/gradle-4.8-bin/divx0s2uj4thofgytb7gf9fsi/gradle-4.8/lib/gradle-core-api-4.8.jar!/org/gradle/api/Project.class" />
     <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -1084,13 +1090,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/SealedClass.kt" />
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/faceDetect/FaceDetectUtil.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="4" column="1" selection-start-line="4" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/Agency/SmallHeadFather.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -1126,13 +1125,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/IfYouAreTheOne/Stage.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/JAVA8/src.zip!/javax/imageio/ImageIO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="41076">
@@ -1156,8 +1148,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1176">
-          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+        <state relative-caret-position="1288">
+          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1178,17 +1170,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/IfYouAreTheOne/Girl.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/IfYouAreTheOne/test.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
-          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/faceDetect/FaceDetectUtil.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/IfYouAreTheOne/Girl.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="46" column="34" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/IfYouAreTheOne/Stage.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
         </state>
       </provider>
     </entry>

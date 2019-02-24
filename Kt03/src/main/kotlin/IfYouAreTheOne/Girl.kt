@@ -38,3 +38,11 @@ fun filterGirlByAddressHeightAge(address: String, height:Int, age:Int){
         }
     }
 }
+
+infix fun List<Girl>.findGirlAgeLessThan(age:Int){
+    filter { it.age < age }.forEach(::println)
+}
+
+infix fun List<Girl>.findGirlComeFrom(address:String){
+    filter { it.address == address }.forEach(::println)
+}
