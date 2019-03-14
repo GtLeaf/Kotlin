@@ -1,12 +1,14 @@
 fun main(arg:Array<String>){
     var arr = intArrayOf(51, 46, 32, 18, 65, 97, 82, 30, 77, 50,2,33,12,100)
 //    var arr = intArrayOf(10, 8, 2)
+    var arr3 = intArrayOf(6, 7, 11, 10, 1)
 //    bubbleSort(arr)
 //    selectSort(arr)
+    quickSort(arr3, 0, arr3.size-1)
 //    quickSort2(arr, 0, arr.size-1)
 //    insertSort(arr)
-    mergeSort(arr, 0, arr.size-1)
-    arr.forEach { print("$it,") }
+//    mergeSort(arr, 0, arr.size-1)
+    arr3.forEach { print("$it,") }
 }
 //冒泡排序，时间复杂度O(n²)l
 private fun bubbleSort(arr:IntArray){

@@ -156,6 +156,9 @@ fun isMatch(s: String, p: String): Boolean {
 
     return true
 }
+/*
+* 最大水容量
+* */
 fun maxArea(height: IntArray): Int {
     var i = 0
     var j = height.size-1
@@ -172,3 +175,6 @@ fun maxArea(height: IntArray): Int {
     }
     return maxArea
 }
+/*
+*
+* */
