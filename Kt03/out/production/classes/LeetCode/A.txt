@@ -1,0 +1,5 @@
+Compiled from "Solution.java"
+public class LeetCode.Solution {
+  public LeetCode.Solution();
+  public static void main(java.lang.String[]);
+}
