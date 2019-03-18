@@ -6,10 +6,10 @@ public class leetCode {
     public static void main(String[] args){
         Solution solvable = new Solution();
         Solution solution = new Solution();
-//        System.out.println(((Solution) solvable).findGiftNumber());
-//        ((Solution) solvable).findGiftNumber();
-//        ((Solution) solvable).dealWordFunction();
-//        ((Solution) solvable).findRepeatNumber(new int[]{6, 3, 1, 0, 2, 5, 3});
+//        System.out.println(((SolutionMain) solvable).findGiftNumber());
+//        ((SolutionMain) solvable).findGiftNumber();
+//        ((SolutionMain) solvable).dealWordFunction();
+//        ((SolutionMain) solvable).findRepeatNumber(new int[]{6, 3, 1, 0, 2, 5, 3});
 //        solvable.mergeTwoLists2(solution.getTestListNode1(), solution.getTestListNode2());
         solvable.mergeKLists(solution.getTestListNodeList());
 
