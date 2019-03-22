@@ -10,10 +10,16 @@ public class SortFunctionJava {
         }*/
     }
 }
+
+
+
 //-----------------------堆排序算法，开始：10:39----------------------
 class MySort{
 
     public int[] heapSort(int[] arr){
+        if (null == arr || arr.length <= 1){
+            return arr;
+        }
         int length = arr.length;
         int temp;
         //循环建堆

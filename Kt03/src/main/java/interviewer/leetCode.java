@@ -11,8 +11,10 @@ public class leetCode {
 //        ((SolutionMain) solvable).dealWordFunction();
 //        ((SolutionMain) solvable).findRepeatNumber(new int[]{6, 3, 1, 0, 2, 5, 3});
 //        solvable.mergeTwoLists2(solution.getTestListNode1(), solution.getTestListNode2());
-        solvable.mergeKLists(solution.getTestListNodeList());
-
+//        solvable.mergeKLists(solution.getTestListNodeList());
+//        System.out.println(solvable.maxSubArray(new int[]{-2,1,-3,4,-1,2,1,-5,4}));
+            System.out.println("a".matches(".*"));
+//            System.out.println(solution.isMatch("aabc", ".*b"));
 
     }
 }
@@ -35,6 +37,128 @@ class Solution implements Solvable{
         ListNode next;
         ListNode(int x) { val = x; }
     }
+
+    //---------------------正则字符匹配(10困难),开始19:39,结束：21:11，耗时：1小时32分钟------------------------------
+    public boolean isMatch(String s, String p) {
+        //边界处理
+        if ("".equals(p) && "".equals(s)){
+            return true;
+        }
+        //正则为空，s不为空
+        if ("".equals(p) ){
+            return false;
+        }
+
+
+        return matchCode(s.toCharArray(), p.toCharArray(), 0, 0);
+    }
+
+    private boolean matchCode(char[] charsS, char[] charsP, int sIndex, int pIndex){
+        //匹配完输出结果
+        if (sIndex>=charsS.length && pIndex>=charsP.length){
+            return true;
+        }
+        //正则结束了，s没有结束
+        if(pIndex >= charsP.length){
+            return false;
+        }
+
+
+        //判断第二个字符是否是*，且不越界 .*,a*
+        if (pIndex+1<charsP.length && '*'==charsP[pIndex+1]){
+            //如果字母符合，或者是'.'
+            if(sIndex<charsS.length && (charsS[sIndex] == charsP[pIndex] || '.' == charsP[pIndex])){
+                if (pIndex+2<charsP.length){
+                    return matchCode(charsS, charsP, sIndex, pIndex+2) ||//忽略
+                            matchCode(charsS, charsP, sIndex+1, pIndex) ||//本状态
+                            matchCode(charsS, charsP, sIndex+1, pIndex+2);  //下一个状态
+                }else {
+                    return matchCode(charsS, charsP, sIndex+1, pIndex);
+                }
+
+            }else {
+                return matchCode(charsS, charsP, sIndex, pIndex+2);
+            }
+
+        }
+        //判断是否是'.'和其他字符
+        if (sIndex<charsS.length && ('.' == charsP[pIndex] || charsS[sIndex] == charsP[pIndex])){
+            return matchCode(charsS, charsP, sIndex+1, pIndex+1);
+        }
+        return false;
+    }
+
+
+    //------------------求和最大的子数组53题改进，开始12:22，结束12：31失败---------------------------------
+    public int maxSubArray(int[] nums) {
+        //边界处理
+        if (null == nums){
+            return 0;
+        }
+        if (1 == nums.length){
+            return nums[0];
+        }
+        int max = 0;
+        int left = 0;
+        int right = nums.length-1;
+        int sum = 0;
+        for (int i=0; i<nums.length; i++){
+            max += nums[i];
+        }
+        sum = max;
+        while (left < right){
+            if (nums[left] < nums[right]){
+                sum -= nums[left];
+                left++;
+            }else {
+                sum -= nums[right];
+                right--;
+            }
+            max = sum > max ? sum : max;
+        }
+
+        return max;
+    }
+
+    //------------------求和最大的子数组53题，开始10：51,结束11:15，耗时24分钟-----------------------------
+    public int maxSubArray2(int[] nums) {
+        //边界处理
+        if (null == nums){
+            return 0;
+        }
+        if (1 == nums.length){
+            return nums[0];
+        }
+
+
+        return getMaxSubArray(nums, 0, nums[0]);
+    }
+    public int getMaxSubArray(int[] nums, int index, int max){
+        if (index > nums.length-1){
+            return max;
+        }
+        int sum = nums[index];
+        int left = index-1;
+        int right = index+1;
+        //当最大值为nums[index]的情况
+        max = sum>max ? sum : max;
+        //向左拓展
+        while ( left>=0){
+            sum += nums[left];
+            max = sum>max ? sum : max;
+            left--;
+        }
+        //向右拓展
+        while (right<nums.length){
+            sum += nums[right];
+            max = sum>max ? sum : max;
+            right++;
+        }
+
+        return getMaxSubArray(nums, index+1, max);
+    }
+
+    //--------------------------测试用例-----------------------
     public ListNode getTestListNode1(){
         ListNode node1 = new ListNode(1);
         ListNode node2 = new ListNode(2);
@@ -90,7 +214,7 @@ class Solution implements Solvable{
 
         return node;
     }
-    public ListNode divideLists(ListNode[] lists, int start, int end){
+    private ListNode divideLists(ListNode[] lists, int start, int end){
         //list数量大于2，继续划分，否则进行合并
         if (end - start > 1){
             int mid = (start+end)/2;
