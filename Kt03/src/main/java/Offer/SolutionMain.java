@@ -1,23 +1,156 @@
 package Offer;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
 public class SolutionMain {
     public static void main(String[] arhs){
         MyCollision collision = new MyCollision();
         Solution solution = new Solution();
         ListNode listNode = collision.generate(2);
 //        solution.deleteNode(listNode, listNode.next);
-        solution.ReorderOddEven(new int[]{1, 2, 3, 4, 5, 6});
+//        solution.ReorderOddEven(new int[]{1, 2, 3, 4, 5, 6});
+//        solution.spiralOrderPrint(new int[][]{{1,2,3,4},{5,6,7,8},{9,10,11,12}, {13,14,15,16}});
+        solution.printOrderZhiWord(new int[][]{{1,2},{3,4},{5,6}});
 
 
     }
-
-
 }
 
 class Solution{
 
+    //-------------之字打印，开始23:16-23:35
+    public void printOrderZhiWord(int[][] matrix){
+        if (null == matrix){
+            return;
+        }
 
-    //-------------------将数组按一定规律划分前后，开始15：15，结束---------------------------
+        int x = matrix.length-1;
+        int y = matrix[0].length-1;
+        int times = x>y ? x : y;
+        boolean direct = true;
+        for (int i=0; i<=times; i++){
+            printZhiWord(matrix, i, direct);
+            direct  = !direct;
+        }
+
+    }
+
+    public void printZhiWord(int[][] m, int len, boolean direct){
+        int curX = 0;
+        int curY = 0;
+        //从上往下
+        if (direct){
+            curX = len;
+            while (curX>=0 && curY>=0){
+                if (curX<m.length && curY<m[0].length){
+                    System.out.println(m[curX--][curY++]);
+                }
+            }
+        }else {//从下往上
+            curY = len;
+            while (curX>=0 && curY>=0){
+                if (curX<m.length && curY<m[0].length){
+                    System.out.println(m[curX++][curY--]);
+                }
+            }
+        }
+
+
+    }
+
+    //-------------蛇形打印,开始:13:38--------------------
+    public void spiralOrderPrint(int[][] matrix){
+        if (null == matrix ){
+            return;
+        }
+        int x1 = 0;
+        int y1 = 0;
+        int x2 = matrix.length-1;
+        int y2 = matrix[0].length-1;
+        while(x1 <= x2 && y1 <= y2){
+//            printEdge(matrix, x1++, y1++, x2--, y2--);
+            rotateEdge(matrix, x1++, y1++, x2--, y2--);
+        }
+        for (int i = 0; i < matrix.length; i++){
+            for (int j = 0; j < matrix.length; j++ ){
+                System.out.print(matrix[j][i]+" ");
+            }
+            System.out.println();
+        }
+        System.out.println("结束");
+    }
+
+    //可改递归
+    private void printEdge(int[][] m,int x1, int y1, int x2,int y2){
+        if (x1 > x2 && y1 > y2){
+            return;
+        }
+        //只有一横
+        if (y1 == y2){
+            for (int i=x1; i<=x2; i++){
+                System.out.print(m[i][y1]+"  ");
+            }
+        }else if(x1 == x2){//在同一列
+            for (int i=y1; i<=y2; i++){
+                System.out.println(m[x1][i]);
+            }
+        }else {
+            int curX = x1;
+            int curY = y1;
+            //打印上
+            while (curX < x2){
+                System.out.print(m[curX++][curY]+"  ");
+            }
+            //打印右
+            while(curY < y2){
+                System.out.print(m[curX][curY++]+"  ");
+            }
+            //打印下
+            while(curX > x1){
+                System.out.print(m[curX--][curY]+"  ");
+            }
+            //打印左
+            while(curY > y1){
+                System.out.print(m[curX][curY--]+"  ");
+            }
+        }
+    }
+
+
+    public void rotateEdge(int [][] m,int x1, int y1, int x2,int y2){
+        int times = x2 - x1;
+        for (int offset = 0; offset < times; offset++){
+            int temp = m[x1+offset][y1];
+            m[x1+offset][y1] = m[x1][y2-offset];
+            m[x1][y2-offset] = m[x2-offset][y2];
+            m[x2-offset][y2] = m[x2][y1+offset];
+            m[x2][y1+offset] = temp;
+        }
+    }
+
+    //----------------比较器
+    public void sort(){
+        ListNode listNode1 = new ListNode(1);
+        ListNode listNode2 = new ListNode(2);
+        ListNode listNode3 = new ListNode(3);
+
+        List<ListNode> listNodeList = new ArrayList<>();
+        listNodeList.add(listNode3);
+        listNodeList.add(listNode1);
+        listNodeList.add(listNode2);
+
+        listNodeList.sort((Comparator<ListNode>) (o1, o2) -> {
+            if (o1.val < o2.val) return -1;
+            if (o1.val == o2.val) return 0;
+            //if (o1.val > o2.val)
+            return 1;
+        });
+        System.out.println("finish");
+    }
+
+    //-------------------将数组按一定规律划分前后，开始15：15，结束15:40---------------------------
     public void ReorderOddEven(int arr[]){
         //边界处理
         if (null == arr || arr.length<=1){
