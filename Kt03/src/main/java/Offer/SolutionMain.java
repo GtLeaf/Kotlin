@@ -1,24 +1,440 @@
 package Offer;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class SolutionMain {
     public static void main(String[] arhs){
         MyCollision collision = new MyCollision();
-        Solution solution = new Solution();
+        Solutions solutions = new Solutions();
+        TestCase testCase = new TestCase();
         ListNode listNode = collision.generate(2);
-//        solution.deleteNode(listNode, listNode.next);
-//        solution.ReorderOddEven(new int[]{1, 2, 3, 4, 5, 6});
-//        solution.spiralOrderPrint(new int[][]{{1,2,3,4},{5,6,7,8},{9,10,11,12}, {13,14,15,16}});
-        solution.printOrderZhiWord(new int[][]{{1,2},{3,4},{5,6}});
-
+//        solutions.deleteNode(listNode, listNode.next);
+//        solutions.ReorderOddEven(new int[]{1, 2, 3, 4, 5, 6});
+//        solutions.spiralOrderPrint(new int[][]{{1,2,3,4},{5,6,7,8},{9,10,11,12}, {13,14,15,16}});
+//        solutions.printOrderZhiWord(new int[][]{{1,2},{3,4},{5,6}});
+//        solutions.cutGold(new int[]{10,20,30});
+//        solutions.findMaximizedCapital(3, 20, new int[]{7,8,60}, new int[]{5,10,100} );
+//        solutions.testTireTree();
+//        solutions.solveMaxSeachTree(testCase.getSearchTreeCase());
+//        solutions.solveTreeMaxDistance(testCase.getSearchTreeCase());
+        solutions.solveJudgeBSTree();
 
     }
 }
 
-class Solution{
+class Solutions {
+    //------机器人走格子-----
+    //开始20:21
+    public static int solveMachine(){
+        Scanner in = new Scanner(System.in);
+        int m = in.nextInt();
+        int n = in.nextInt();
+        int k = in.nextInt();
+        int count = 0;
+        for (int i=0; i<n; i++){
+            int tempN = i;
+            int nCount = 0;
+            if (tempN > 9 ){
+                while (tempN > 0){
+                    nCount += tempN%10;
+                    tempN = tempN/10;
+                }
+            }else {
+                nCount = tempN;
+            }
+
+
+
+            for(int j=0; j<m; j++){
+                int mCount = 0;
+                int tempM = j;
+                if (tempM > 9){
+                    while (tempM > 0){
+                        mCount += tempM%10;
+                        tempM = tempM/10;
+                    }
+                }else {
+                    mCount = tempM;
+                }
+
+                if ((mCount + nCount) <= k){
+                    count++;
+                }else {
+                    break;
+                }
+            }
+        }
+
+        return count;
+    }
+
+    //-------判断平衡二叉树--------
+    //开始19:40
+    //结束20:10
+    //耗时30分钟
+    //存在问题：数组越界
+    //测试用例：10,5,15,3,7,13,18,
+    public void solveJudgeBSTree(){
+        Scanner in = new Scanner(System.in);
+        ArrayList<TreeNode> nodeList = new ArrayList<>();
+        String input = in.next();
+        if (null == input || input.equals(",")){
+            System.out.println("False");
+            return;
+        }
+        String[] numStrs = input.split(",");
+        for (String num : numStrs){
+            if (!"".equals(num)){
+                nodeList.add(new TreeNode(Integer.valueOf(num)));
+            }
+        }
+        TreeNode curNode;
+        for (int i=0; i<nodeList.size(); i++){
+            curNode = nodeList.get(i);
+            if (i*2+1 < nodeList.size()){
+                curNode.left = nodeList.get(i*2+1);
+            }
+            if (i*2+2 < nodeList.size()){
+                curNode.right = nodeList.get(i*2+2);
+            }
+        }
+        System.out.println(judgeBSTree(nodeList.get(0)).isBS);
+    }
+
+    class BSTreeReturnType{
+        int max;
+        int min;
+        boolean isBS;
+
+        public BSTreeReturnType(int max, int min, boolean isBS) {
+            this.max = max;
+            this.min = min;
+            this.isBS = isBS;
+        }
+    }
+
+    public BSTreeReturnType judgeBSTree(TreeNode curNode){
+        //空节点是搜索二叉树
+        if (null == curNode){
+            return new BSTreeReturnType(Integer.MIN_VALUE, Integer.MAX_VALUE, true);
+        }
+
+        //所需信息，最大max，最小min,是否是搜索
+        //情况1：左边是
+        //情况2：右边是
+        //情况3：左+右+自身都是
+        BSTreeReturnType leftReturn = judgeBSTree(curNode.left);
+        BSTreeReturnType rightReturn = judgeBSTree(curNode.right);
+        boolean isBS = false;
+
+        if (!leftReturn.isBS || !rightReturn.isBS){
+            return new BSTreeReturnType(0, 0, false);
+        }
+        if (curNode.value > leftReturn.max
+        && curNode.value < rightReturn.min){
+            isBS = true;
+        }
+        //解黑盒
+        return new BSTreeReturnType(Math.max(Math.max(leftReturn.max, rightReturn.max), curNode.value),
+                Math.min(Math.min(leftReturn.min, rightReturn.min), curNode.value), isBS);
+    }
+
+    //-------聚会，上下级领导，多叉树，最大活跃度
+    //开始14:46
+    //结束15:09(未测试)
+    //耗时23分钟
+    class ActivelyNode{
+        int actively;
+        List<ActivelyNode> activelyNodes;
+        ActivelyNode(int actively){
+            this.actively = actively;
+            activelyNodes = new ArrayList<>();
+        }
+    }
+
+    class ActivelyReturnType{
+        int arriveActively;
+        int unarriveActively;
+
+        public ActivelyReturnType(int arriveActively, int unarriveActively) {
+            this.arriveActively = arriveActively;
+            this.unarriveActively = unarriveActively;
+        }
+    }
+
+    public void solveMaxActively(ActivelyNode root){
+        ActivelyReturnType returnType = getMaxActively(root);
+        System.out.println(Math.max(returnType.arriveActively, returnType.unarriveActively));
+    }
+
+    public ActivelyReturnType getMaxActively(ActivelyNode curNode){
+        //需要信息：该节点来的最大活跃度，不来的最大活跃度
+        int arriveActively = curNode.actively;
+        int unarriveActively = 0;
+
+        //遍历每一个后代，求来与不来的最大活跃度
+        //1.本节点来 = 本节点活跃度 + 后代不来的最大活跃度
+        //2.本节点不来 = Max(后代节点来，后代节点不来)
+        for (int i=0; i<curNode.activelyNodes.size(); i++){
+            ActivelyReturnType returnType = getMaxActively(curNode.activelyNodes.get(i));
+            arriveActively += returnType.unarriveActively;
+            unarriveActively += Math.max(returnType.arriveActively, returnType.unarriveActively);
+        }
+
+        return new ActivelyReturnType(arriveActively, unarriveActively);
+    }
+    //---------找一棵树的最远距离----------
+    //开始12:43
+    //结束13:08
+    //耗时25分钟
+    class TreeMaxDistance{
+        //需要信息:1.单边最长 2.总长
+        int maxEdge;
+        int maxDistance;
+
+        public TreeMaxDistance(int maxEdge, int maxDistance) {
+            this.maxEdge = maxEdge;
+            this.maxDistance = maxDistance;
+        }
+    }
+
+    public void solveTreeMaxDistance(TreeNode root){
+
+        System.out.println(findTreeMaxDistance(root).maxDistance);
+    }
+
+    public TreeMaxDistance findTreeMaxDistance(TreeNode curNode){
+        if (null == curNode){
+            return new TreeMaxDistance(0, 0);
+        }
+        //情况1：左边最大
+        //情况2：右边最大
+        //情况3: 左边最深+右边最深+自身最大
+        TreeMaxDistance leftReturn = findTreeMaxDistance(curNode.left);
+        TreeMaxDistance rightReturn = findTreeMaxDistance(curNode.right);
+
+        //解黑盒
+        int maxDistance = Math.max(leftReturn.maxEdge+rightReturn.maxEdge+1,
+                Math.max(leftReturn.maxDistance, rightReturn.maxDistance));
+        int maxEdge = Math.max(leftReturn.maxEdge, rightReturn.maxEdge)+1;
+
+        return new TreeMaxDistance(maxEdge, maxDistance);
+    }
+
+    //--------找一棵树的最大搜索子树------
+    //开始10:42
+    //结束11:15 (未测试)
+    //耗时33分钟
+    class TreeNode{
+        int value;
+        TreeNode left;
+        TreeNode right;
+
+        public TreeNode(int value) {
+            this.value = value;
+        }
+    }
+
+    class SearchTreeReturnType{
+        TreeNode head;
+        int size;
+        int max;
+        int min;
+
+        public SearchTreeReturnType(TreeNode head, int size, int max, int min) {
+            this.head = head;
+            this.size = size;
+            this.max = max;
+            this.min = min;
+        }
+    }
+
+
+    public void solveMaxSeachTree(TreeNode head){
+        System.out.println(findMaxSeachTree(head).size);
+    }
+
+    //测试用例
+    public SearchTreeReturnType findMaxSeachTree(TreeNode curHead){
+        //所需数据：1.最大子树头结点 2.最大子树size 3.最大值max 4.最小值min
+        if (null == curHead){
+            return new SearchTreeReturnType(null, 0, Integer.MIN_VALUE, Integer.MAX_VALUE);
+        }
+
+        SearchTreeReturnType leftReturn = findMaxSeachTree(curHead.left);
+        SearchTreeReturnType rightReturn = findMaxSeachTree(curHead.right);
+
+        //三种情况
+        //1.最大子树在左边
+        //2.最大子树在右边
+        //3.最大子树是自己
+        //情况1,2：
+        int maxSize = leftReturn.size > rightReturn.size ? leftReturn.size : rightReturn.size;
+        //情况3
+        int includeSelfSize = 0;
+        if (curHead.left == leftReturn.head
+            && curHead.right == rightReturn.head
+            && curHead.value > leftReturn.max
+            && curHead.value < rightReturn.min){
+            includeSelfSize = leftReturn.size + 1 + rightReturn.size;
+        }
+        maxSize = Math.max(maxSize, includeSelfSize);
+
+        //解黑盒
+        TreeNode head = leftReturn.size > rightReturn.size ? leftReturn.head : rightReturn.head;
+        if (maxSize == includeSelfSize){
+            head = curHead;
+        }
+        return new SearchTreeReturnType(head, maxSize,
+                Math.max(Math.max(leftReturn.max, rightReturn.max), curHead.value),
+                Math.min(Math.min(leftReturn.min, rightReturn.min), curHead.value));
+    }
+
+
+    //-------------tire树，
+    // 开始 10:42,
+    // 结束:11.09，
+    // 耗时：27分钟，
+    //完成度：insert()和search()
+    class TireNode{
+        int path;
+        int end;
+        TireNode[] tireNodes;
+
+        public TireNode(int path, int end) {
+            this.path = path;
+            this.end = end;
+            this.tireNodes = new TireNode[26];
+        }
+    }
+
+    class Tire{
+        private TireNode root;
+
+        Tire(){
+            root = new TireNode(0,0);
+        }
+
+        public void insert(String word){
+            if (0 == word.length()){
+                return;
+            }
+            char[] charArr = word.toCharArray();
+            TireNode curNode = root;
+            int index = 0;
+            //遍历charArr判断，建立tire树
+            for (char ch : charArr) {
+                //求index
+                index = ch - 'a';
+                //建边
+                if (null == curNode.tireNodes[index] ){
+                    curNode.tireNodes[index] = new TireNode(0,0);
+                }
+                curNode = curNode.tireNodes[index];
+                curNode.path++;
+            }
+            curNode.end++;
+        }
+
+        public int search(String word){
+            if (0 == word.length()){
+                return 0;
+            }
+            char[] charArr = word.toCharArray();
+            int index;
+            TireNode curNode = root;
+            //遍历charArr，如果下一个为null，返回0,否则返回end
+            for (char ch : charArr){
+                index = ch - 'a';
+                if (null == curNode.tireNodes[index]){
+                    return 0;
+                }
+                curNode = curNode.tireNodes[index];
+            }
+            return curNode.end;
+        }
+    }
+    //测试用例: cmd, cm, cing, cmd, cmd
+    public void testTireTree(){
+        Tire tire = new Tire();
+        String[] words = new String[]{"cmd", "cm", "cing", "cmd", "cmd"};
+        for (String str : words) {
+            tire.insert(str);
+        }
+
+        System.out.println(tire.search("cmd"));
+    }
+    //-------------项目和利润，开始23:26,结束：23.46，耗时:20分钟 ---------------------
+    class ProjectNode {
+        int profit;
+        int captital;
+
+        public ProjectNode(int profit, int captital) {
+            this.profit = profit;
+            this.captital = captital;
+        }
+    }
+    //captital建小根堆
+    class MinComparator implements Comparator<ProjectNode> {
+        @Override
+        public int compare(ProjectNode o1, ProjectNode o2) {
+            return o1.captital - o2.captital;
+        }
+    }
+
+    //profits建大根堆
+    class MaxComparator implements Comparator<ProjectNode> {
+        @Override
+        public int compare(ProjectNode o1, ProjectNode o2) {
+            return o2.profit - o1.profit;
+        }
+    }
+    public void findMaximizedCapital(int k, int m, int[] profits, int[] captital){
+        ProjectNode[] projectNodes = new ProjectNode[profits.length];
+        for (int i=0; i<profits.length; i++){
+            projectNodes[i] = new ProjectNode(profits[i], captital[i]);
+        }
+        //captital建小根堆
+        PriorityQueue<ProjectNode> captitalQueue = new PriorityQueue<>(new MinComparator());
+        //profits建大根堆
+        PriorityQueue<ProjectNode> profitQueue = new PriorityQueue<>(new MaxComparator());
+
+        captitalQueue.addAll(Arrays.asList(projectNodes).subList(0, captital.length));
+        while(true){
+            //从captital中解锁项目，解锁加入profit堆
+            while (!captitalQueue.isEmpty() && captitalQueue.peek().captital < m){
+                profitQueue.add(captitalQueue.poll());
+            }
+            //如果无项目可以做，跳出
+            if (profitQueue.isEmpty() || k<=0){
+                break;
+            }
+            //从profit中取利润最大的做
+            m += profitQueue.poll().profit;
+            k--;
+        }
+        System.out.println(m);
+    }
+
+    //------------切割黄金,开始23:03,结束:23:16，耗时13分钟---------------------------
+    public void cutGold(int[] numArr){
+
+        //创建小根堆
+        PriorityQueue<Integer> queue = new PriorityQueue<>();
+        for (int num : numArr) {
+            queue.add(num);
+        }
+        int result = 0;
+        int cur = 0;
+        while (queue.size()>1){
+            //每次弹出最小两个数，相加
+            cur = queue.poll() + queue.poll();
+            //将两数之和加入堆
+            result += cur;
+            queue.add(cur);
+        }
+        System.out.println(result);
+    }
 
     //-------------之字打印，开始23:16-23:35
     public void printOrderZhiWord(int[][] matrix){
@@ -359,3 +775,5 @@ class MyCollision {
     }
 
 }
+
+

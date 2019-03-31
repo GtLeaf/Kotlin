@@ -122,7 +122,7 @@ fun insertSort(arr:IntArray){
 //归并排序
 fun mergeSort(arr:IntArray, start: Int, end: Int){
     if(start<end){
-        var mid = (start + end) / 2
+        val mid = (start + end) / 2
         mergeSort(arr, start, mid)
         mergeSort(arr, mid+1, end)
         merge(arr, start, mid, end)
