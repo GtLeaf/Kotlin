@@ -17,14 +17,41 @@ public class SolutionMain {
 //        solutions.testTireTree();
 //        solutions.solveMaxSeachTree(testCase.getSearchTreeCase());
 //        solutions.solveTreeMaxDistance(testCase.getSearchTreeCase());
-        solutions.solveJudgeBSTree();
+//        solutions.solveJudgeBSTree();
+        System.out.println(solutions.solveAimSub(new int[]{7, 2, 1}, 7));
 
     }
 }
 
 class Solutions {
+
+    //-----------无序数组，求累加和为aim的最长子数组-------------
+    //开始：21:08
+    //结束：21:24
+    //耗时：16分钟
+    //测试用例：{7, 3, 2, 1, 1, 7, 7}, {7, 3, 1}
+    public int solveAimSub(int[] numArr, int aim){
+        //一个hashmap记录出现的累加和
+        HashMap<Integer, Integer> cumulationMap = new HashMap<>();
+        int sum = 0;
+        int max = 0;
+        //先添加一条数据(-1,0)
+        cumulationMap.put(0, -1);
+        //指向下一个，求当前累加和-aim
+        for (int i=0; i<numArr.length; i++){
+            sum += numArr[i];
+            int diff = sum - aim;
+            cumulationMap.put(sum, i);
+            if (cumulationMap.containsKey(diff)){
+                max = max > i-cumulationMap.get(diff) ? max : i-cumulationMap.get(diff);
+            }
+        }
+
+        return max;
+    }
+
     //------机器人走格子-----
-    //开始20:21
+    //开始20:21 实现错误
     public static int solveMachine(){
         Scanner in = new Scanner(System.in);
         int m = in.nextInt();
