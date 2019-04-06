@@ -18,12 +18,72 @@ public class SolutionMain {
 //        solutions.solveMaxSeachTree(testCase.getSearchTreeCase());
 //        solutions.solveTreeMaxDistance(testCase.getSearchTreeCase());
 //        solutions.solveJudgeBSTree();
-        System.out.println(solutions.solveAimSub(new int[]{7, 2, 1}, 7));
+//        System.out.println(solutions.solveAimSub(new int[]{7, 2, 1}, 7));
+        System.out.println(solutions.solveMostEOR(new int[]{3,2,1,3}));
 
     }
 }
 
 class Solutions {
+    //----------求异或和为0的最长子数组-------------------------
+    //开始14：44
+    //结束15:55
+    //耗时1小时11分钟
+    //测试用例：{0}, {3,2,1,0}, {3,2,1,3,2,1}, {3,2,1,1}
+    public int solveMostEOR(int[] arr){
+        HashMap<Integer, Integer> sumMap = new HashMap<>();
+        int[] dp = new int[arr.length];
+        int maxLen = 0;
+        int sum = 0;
+
+        sumMap.put(0, -1);
+        //遍历
+        for (int i=0; i<arr.length; i++){
+            //求异或和
+            sum ^= arr[i];
+            //求dp[i],即max(dp[i-1], dp[k-1]+1)
+            //求K
+            if (sumMap.containsKey(sum)){
+                int pre = sumMap.get(sum);
+                //记录dp[i]
+                dp[i] = pre == -1 ? 1 : (dp[pre] + 1);
+            }
+
+            if (i>0){
+                dp[i] = Math.max(dp[i-1], dp[i]);
+            }
+
+            maxLen = Math.max(maxLen, dp[i]);
+            sumMap.put(sum, i);
+        }
+
+        return maxLen;
+    }
+
+    public int solveMostEOR2(int[] arr){
+        HashMap<Integer, Integer> sumMap = new HashMap<>();
+        int[] dp = new int[arr.length];
+        int maxLen = 0;
+        int sum = 0;
+
+        sumMap.put(0, -1);
+        //遍历
+        for (int i=0; i<arr.length; i++){
+            //求异或和
+            sum ^= arr[i];
+            if (sumMap.containsKey(sum)){
+                int pre = sumMap.get(sum);
+                dp[i] = pre == -1 ? 1 : (dp[pre] + 1);
+            }
+            if(i > 0){
+                dp[i] = Math.max(dp[i-1], dp[i]);
+            }
+            sumMap.put(sum, i);
+            maxLen = Math.max(maxLen, dp[i]);
+
+        }
+        return maxLen;
+    }
 
     //-----------无序数组，求累加和为aim的最长子数组-------------
     //开始：21:08

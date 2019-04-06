@@ -151,6 +151,15 @@ class TreeConstruct {
         }
         return rootNode;
     }
+
+    //后序遍历 左右中
+    private void postOrderTraverse1(TreeNode root){
+        if (null != root){
+            postOrderTraverse1(root.leftNode);
+            postOrderTraverse1(root.rightNode);
+            System.out.print(root.data+" ");
+        }
+    }
     //-------------------------------------------------1.完成，耗时：1小时-----------------------------------------
 }
 
