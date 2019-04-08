@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args){
         Solve solve = new Solve();
         long startTime = System.currentTimeMillis();
-//        solve.solveCutCoin3(new int[]{3,5,7,8,9,10,11}, 500);
-        solve.solveCutCoin3(new int[]{3,2,5}, 10);
+        solve.solveCutCoin5(new int[]{3,5,7,8,9,10,11}, 500);
+//        solve.solveCutCoin4(new int[]{1,2,5}, 10);
         System.out.println(System.currentTimeMillis() - startTime);
     }
 }
@@ -16,6 +16,7 @@ class Solve{
     //结束16:57
     //耗时32分钟
 
+    //暴力搜索
     public void solveCutCoin(int[] coins, int amount){
         System.out.println(codeCutCoin(coins, 0, amount));
     }
@@ -92,6 +93,85 @@ class Solve{
         return counts[index][amount];
     }
 
+    //动态规划2 空间复杂度优化
+    public void solveCutCoin4(int[] coinArr, int aim){
+        int[] counts = new int[aim+1];
+        int[] isUpdate = new int[aim+1];
+//        counts[0] = 1;
+        System.out.println(codeCutCoin42(coinArr, coinArr.length-1, aim, counts, isUpdate));
+//        System.out.println(codeCutCoin4(coinArr, coinArr.length-1, aim, counts));
+        System.out.println("结束");
+    }
+    public int codeCutCoin4(int[] coins, int index, int amount, int[] counts){
+        //basecase
+        if (index < 0 || amount < 0){
+            return 0;
+        }
+//        System.out.println(index + ","+ amount + "," + counts[amount] + "[---");
+        if (0 == amount){
+            return 1;
+        }
+        //避免重复计算
+        /*counts[amount] = codeCutCoin4(coins, index - 1, amount, counts);
+        if (amount-coins[index] >=0){
+            if (0 == counts[amount-coins[index]]){
+                int res = codeCutCoin4(coins, index, amount-coins[index], counts);
+                counts[amount-coins[index]] = (0 == res) ? -1 :res;
+            }
+            counts[amount] += -1 == counts[amount-coins[index]] ? 0 : counts[amount-coins[index]];
+        }*/
+        /*counts[amount] = codeCutCoin4(coins, index - 1, amount, counts);
+        if (amount-coins[index] >=0){
+            if (0 == counts[amount-coins[index]]){
+                int res = codeCutCoin4(coins, index, amount-coins[index], counts);
+                counts[amount-coins[index]] = (0 == res) ? -1 :res;
+            }
+            counts[amount] += -1 == counts[amount-coins[index]] ? 0 : counts[amount-coins[index]];
+        }*/
+        counts[amount] = codeCutCoin4(coins, index - 1, amount, counts)
+                + (0 == counts[amount-coins[index]] ? codeCutCoin4(coins, index, amount-coins[index], counts) : counts[amount-coins[index]]) ;
+        System.out.println(index + ","+ amount + "," + counts[amount]);
+        return counts[amount];
+    }
+    public int codeCutCoin42(int[] coins, int index, int amount, int[] counts, int[] isUpdate){
+        //basecase
+        if (index < 0 || amount < 0){
+            return 0;
+        }
+        if (0 == amount){
+            return 1;
+        }
+        //避免重复计算
+        if (index >= isUpdate[amount]){
+            counts[amount] =  codeCutCoin42(coins, index - 1, amount, counts, isUpdate)
+                    + codeCutCoin42(coins, index, amount-coins[index], counts, isUpdate);
+            isUpdate[amount] = index+1;
+        }
+//        System.out.println(index + ","+ amount + "," + counts[amount]);
+        return counts[amount];
+    }
+
+    //动态规划
+    public void solveCutCoin5(int[] coinArr, int aim){
+        int[][] counts = new int[coinArr.length][aim+1];
+        System.out.println(codeCutCoin5(coinArr, coinArr.length-1, aim, counts));
+    }
+    public int codeCutCoin5(int[] coins, int index, int amount, int[][] counts){
+        //baseCase
+        if (0 == amount){
+            return 1;
+        }
+        if (index < 0 || amount < 0){
+            return 0;
+        }
+        if (0 == counts[index][amount]){
+            int res = codeCutCoin5(coins, index-1, amount, counts)
+                    + codeCutCoin5(coins, index, amount - coins[index], counts);
+            counts[index][amount] = (0 == res) ? -1 : res;
+        }
+//        System.out.println(index + ","+ amount + "," + counts[index][amount]);
+        return -1 == counts[index][amount] ? 0 : counts[index][amount];
+    }
 }
 
 

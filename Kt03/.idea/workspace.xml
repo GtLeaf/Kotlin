@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b5b0e80-c3f7-4015-a314-5459ca663dd2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Offer/SolutionMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Offer/SolutionMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interviewer/TreePractice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interviewer/TreePractice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/META-INF/Kt03_main.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/META-INF/Kt03_main.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/coursePractise/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/coursePractise/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -69,6 +71,19 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Kt03" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="test" type="396b929e:GradleViewContributor$SourceSetNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Kt03" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="test" type="396b929e:GradleViewContributor$SourceSetNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Kt03" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
             </expand>
@@ -82,11 +97,11 @@
     <session id="1665741673">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="73" />
+          <entry key="project.closed" value="76" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="13" />
-          <entry key="project.open.time.11" value="12" />
+          <entry key="project.open.time.11" value="13" />
           <entry key="project.open.time.12" value="10" />
           <entry key="project.open.time.13" value="6" />
           <entry key="project.open.time.14" value="2" />
@@ -100,18 +115,18 @@
           <entry key="project.open.time.6" value="5" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="7" />
-          <entry key="project.open.time.9" value="4" />
-          <entry key="project.opened" value="77" />
+          <entry key="project.open.time.9" value="5" />
+          <entry key="project.opened" value="79" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="bat" value="1" />
           <entry key="class" value="2" />
-          <entry key="gradle" value="9" />
+          <entry key="gradle" value="10" />
           <entry key="iml" value="1" />
-          <entry key="java" value="76" />
-          <entry key="kt" value="87" />
+          <entry key="java" value="82" />
+          <entry key="kt" value="92" />
           <entry key="properties" value="1" />
           <entry key="txt" value="1" />
           <entry key="xml" value="4" />
@@ -120,10 +135,10 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
-          <entry key="Groovy" value="9" />
+          <entry key="Groovy" value="10" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="76" />
-          <entry key="Kotlin" value="87" />
+          <entry key="JAVA" value="82" />
+          <entry key="Kotlin" value="92" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Properties" value="1" />
           <entry key="XML" value="4" />
@@ -131,19 +146,19 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="166" />
-          <entry key="gradle" value="93" />
-          <entry key="java" value="39753" />
-          <entry key="kt" value="19160" />
+          <entry key="dummy" value="169" />
+          <entry key="gradle" value="106" />
+          <entry key="java" value="41123" />
+          <entry key="kt" value="20351" />
           <entry key="kts" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Groovy" value="93" />
-          <entry key="JAVA" value="39753" />
-          <entry key="Kotlin" value="19196" />
-          <entry key="PLAIN_TEXT" value="166" />
+          <entry key="Groovy" value="106" />
+          <entry key="JAVA" value="41123" />
+          <entry key="Kotlin" value="20387" />
+          <entry key="PLAIN_TEXT" value="169" />
         </counts>
       </usages-collector>
     </session>
@@ -151,75 +166,45 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Offer/SolutionMain.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1848">
-              <caret line="84" column="20" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
-              <folding>
-                <element signature="e#9607#9608#0" expanded="true" />
-                <element signature="e#9649#9650#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/LeetCode/Solution.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/LeetCode/IntToRoman.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/designPattern/ProxyPattern.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
-              <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/interviewer/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1804">
-              <caret line="88" column="43" selection-start-line="88" selection-start-column="43" selection-end-line="88" selection-end-column="43" />
+              <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#165#166#0" expanded="true" />
+                <element signature="e#190#191#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/coursePractise/LRUcache.java">
+        <entry file="jar://D:/JAVA8/src.zip!/java/lang/reflect/InvocationHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+            <state relative-caret-position="22">
+              <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/coursePractise/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/designPattern/proxyPattern/StaticProxy.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="74" column="4" lean-forward="true" selection-start-line="74" selection-start-column="4" selection-end-line="92" selection-end-column="5" />
+            <state relative-caret-position="229">
+              <caret line="44" selection-start-line="44" selection-end-line="45" />
               <folding>
-                <element signature="e#525#526#0" expanded="true" />
-                <element signature="e#589#590#0" expanded="true" />
+                <element signature="e#36#196#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.51/649a609725b857dd285cf69d49d4f1f77335076e/kotlin-stdlib-1.2.51-sources.jar!/kotlin/Array.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -242,6 +227,7 @@
       <find>offer</find>
       <find>Tire</find>
       <find>遍历</find>
+      <find>main</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -439,9 +425,9 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="6185203857989" />
+        <entry key="$PROJECT_DIR$" value="6187702092582" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="2517527848" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="4128086833" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="2585518924" />
         <entry key="$PROJECT_DIR$/settings.gradle" value="768683652" />
       </map>
@@ -464,6 +450,8 @@
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-annotation-processing-gradle/1.2.51/c3d255ffe5c10d60e3c09ba5aee868a3907e33ad/kotlin-annotation-processing-gradle-1.2.51-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.2.51/3a04003373be1b42f8615dd6fc737c44d80ebd4b/kotlin-android-extensions-1.2.51-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-runner/1.2.51/c95f21556c0ee6246745bca9f15f45400b39c737/kotlin-compiler-runner-1.2.51-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.2.51/f55f2b742e87f3424754e572763c9960dab8a5e8/kotlin-reflect-1.2.51-sources.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-common/1.2.51/8bed853d57ddc87fcab4c100421aa8a654d36f99/kotlin-scripting-common-1.2.51-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-compiler/1.2.51/ca2324aa47aec7266ee6b7839596899a5a92a250/kotlin-scripting-compiler-1.2.51-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-gradle/1.2.51/bead3afbce03fb4bbc121779db5b2ef7080e0c74/kotlin-scripting-gradle-1.2.51-sources.jar" />
                             <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.51/649a609725b857dd285cf69d49d4f1f77335076e/kotlin-stdlib-1.2.51-sources.jar" />
@@ -668,10 +656,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/kotlin/Image/ImageTest.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/IfYouAreTheOne/test.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/IfYouAreTheOne/Stage.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/LeetCode/Test.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/DownLoadImage/Main.kt" />
         <option value="$PROJECT_DIR$/build.gradle.kts" />
         <option value="$PROJECT_DIR$/src/main/kotlin/interviewer/Outer.kt" />
@@ -687,7 +671,6 @@
         <option value="$PROJECT_DIR$/src/main/java/interviewer/TencenTest1.java" />
         <option value="$PROJECT_DIR$/src/main/kotlin/interviewer/Tree/TreeNode.kt" />
         <option value="$PROJECT_DIR$/src/main/java/interviewer/JSONTest.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/kotlin/JsonTest.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/LeetCode/Solution.kt" />
         <option value="$PROJECT_DIR$/src/main/java/LeetCode/Solution.java" />
@@ -719,6 +702,11 @@
         <option value="$PROJECT_DIR$/src/main/java/coursePractise/LRUcache.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/coursePractise/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/designPattern/proxyPattern/proxyPattern.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/designPattern/proxyPattern/DynamicProxy.kt" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/designPattern/ProxyPattern.java" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/designPattern/proxyPattern/StaticProxy.kt" />
       </list>
     </option>
   </component>
@@ -734,11 +722,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="218" />
-    <option name="y" value="36" />
-    <option name="width" value="1350" />
-    <option name="height" value="1045" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="2" />
+    <option name="width" value="1150" />
+    <option name="height" value="1030" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -764,27 +752,16 @@
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+      <pane id="PackagesPane">
+        <subPane>
           <expand>
             <path>
-              <item name="Kt03" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Kt03" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="Kt03" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Kt03" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="Kt03_main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="Kt03" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Kt03" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="Kt03_main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Kt03" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Kt03_main" type="616d4139:PackageViewModuleNode" />
             </path>
           </expand>
           <select />
@@ -813,67 +790,55 @@
               <item name="Kt03" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kt03" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kt03" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="coursePractise" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kt03" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kt03" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="coursePractise" type="462c0819:PsiDirectoryNode" />
-              <item name="Main.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="Kt03" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kt03" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kt03" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kt03" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Offer" type="462c0819:PsiDirectoryNode" />
-              <item name="SolutionMain.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="Kt03" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kt03" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Kt03" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Kt03" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="interviewer" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
             <path>
-              <item name="Kt03" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Kt03_main" type="616d4139:PackageViewModuleNode" />
+              <item name="Kt03" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Kt03" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="Kt03" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Kt03" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="Kt03_main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="Kt03" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Kt03" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="Kt03_main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Kt03" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Kt03" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="Kt03_main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="kotlin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Kt03" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Kt03" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="Kt03_main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="kotlin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="designPattern" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Kt03" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Kt03" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="Kt03_main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="kotlin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="designPattern" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="proxyPattern" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Kt03" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Kt03" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
           </expand>
           <select />
@@ -885,18 +850,14 @@
     <property name="SearchEverywhereHistoryKey" value="Str&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554559561453" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554728192148" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Study\Kotlin\Kt03\src\main\kotlin" />
-      <recent name="D:\Study\Kotlin\Kt03\src\main" />
-    </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="Agency" />
       <recent name="Abstract" />
@@ -904,6 +865,13 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Study\Kotlin\Kt03\src\main\kotlin" />
       <recent name="D:\Study\Kotlin\Kt03\src\main\java\InternetDemo" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="designPattern.proxyPattern" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Study\Kotlin\Kt03\src\main\kotlin" />
+      <recent name="D:\Study\Kotlin\Kt03\src\main" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -918,7 +886,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main (2)">
+  <component name="RunManager" selected="Kotlin.designPattern.proxyPattern.StaticProxyKt">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Kt03_main" />
@@ -939,12 +907,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="interviewer.Main" />
+    <configuration name="ProxyPattern" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="designPattern.ProxyPattern" />
       <module name="Kt03_main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="interviewer.*" />
+          <option name="PATTERN" value="designPattern.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -965,14 +933,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Thread.TicketSellerConCurrentKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="designPattern.proxyPattern.StaticProxyKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="Kt03_main" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="Thread.TicketSellerConCurrentKt" />
+      <option name="MAIN_CLASS_NAME" value="designPattern.proxyPattern.StaticProxyKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -980,18 +948,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.SolutionMain" />
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Kotlin.Thread.TicketSellerConCurrentKt" />
       <item itemvalue="Application.Main (1)" />
       <item itemvalue="Application.Main (2)" />
+      <item itemvalue="Kotlin.designPattern.proxyPattern.StaticProxyKt" />
+      <item itemvalue="Application.ProxyPattern" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.designPattern.proxyPattern.StaticProxyKt" />
+        <item itemvalue="Application.ProxyPattern" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.SolutionMain" />
-        <item itemvalue="Kotlin.Thread.TicketSellerConCurrentKt" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -1065,11 +1033,13 @@
       <workItem from="1554438460237" duration="5121000" />
       <workItem from="1554465842969" duration="7412000" />
       <workItem from="1554514023494" duration="19288000" />
+      <workItem from="1554619160445" duration="16913000" />
+      <workItem from="1554682564604" duration="13861000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="321642000" />
+    <option name="totallyTimeSpent" value="352416000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1081,10 +1051,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="175" y="29" width="1080" height="836" extended-state="1" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.32104558" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2221135" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -1093,7 +1063,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2528409" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.40651557" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39660057" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1101,7 +1071,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50067025" side_tool="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Build" order="9" sideWeight="0.49932975" weight="0.30780143" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.305949" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.30311614" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.32714286" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1277,9 +1247,27 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/coursePractise/Main.java</url>
-          <line>42</line>
+          <line>43</line>
           <properties />
           <option name="timeStamp" value="134" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/coursePractise/Main.java</url>
+          <line>122</line>
+          <properties />
+          <option name="timeStamp" value="136" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/coursePractise/Main.java</url>
+          <line>132</line>
+          <properties />
+          <option name="timeStamp" value="137" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/coursePractise/Main.java</url>
+          <line>144</line>
+          <properties />
+          <option name="timeStamp" value="138" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1302,6 +1290,26 @@
       </expression>
     </expressions>
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>method</expression-string>
+        <language-id>kotlin</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>counts[amount-coins[index]]</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>0 == counts[amount-coins[index]]</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>amount-coins[index]</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>amount - i* coins[index]</expression-string>
         <language-id>JAVA</language-id>
@@ -1327,62 +1335,9 @@
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>sumMap</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>y1+offset</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>m[x2][y1+offset]</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>m[x1][y1]</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/JAVA8/src.zip!/java/util/LinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18228">
-          <caret line="694" column="28" selection-start-line="694" selection-start-column="28" selection-end-line="694" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Socket/a.kt" />
-    <entry file="jar://D:/JAVA8/src.zip!/java/net/Socket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="207" column="11" selection-start-line="207" selection-start-column="11" selection-end-line="207" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/JAVA8/src.zip!/java/io/InputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/HelloKotlin.kt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/TestMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Socket/TCP/TcpServer.java" />
     <entry file="jar://D:/JAVA8/src.zip!/java/net/ServerSocket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13384">
@@ -1521,13 +1476,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4532">
           <caret line="248" column="11" selection-start-line="248" selection-start-column="11" selection-end-line="248" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.51/649a609725b857dd285cf69d49d4f1f77335076e/kotlin-stdlib-1.2.51-sources.jar!/kotlin/Array.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1673,11 +1621,71 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/coursePractise/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="74" column="4" lean-forward="true" selection-start-line="74" selection-start-column="4" selection-end-line="92" selection-end-column="5" />
+        <state relative-caret-position="132">
+          <caret line="6" column="61" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JAVA8/src.zip!/java/lang/reflect/Method.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="483" column="18" selection-start-line="483" selection-start-column="18" selection-end-line="483" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JAVA8/src.zip!/java/lang/reflect/Proxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="702" column="53" selection-start-line="702" selection-start-column="42" selection-end-line="702" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/designPattern/proxyPattern/DynamicProxy.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/designPattern/ProxyPattern.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
           <folding>
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#589#590#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#165#166#0" expanded="true" />
+            <element signature="e#190#191#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JAVA8/src.zip!/java/lang/reflect/InvocationHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.51/649a609725b857dd285cf69d49d4f1f77335076e/kotlin-stdlib-1.2.51-sources.jar!/kotlin/Array.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/designPattern/proxyPattern/StaticProxy.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="44" selection-start-line="44" selection-end-line="45" />
+          <folding>
+            <element signature="e#36#196#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1711,6 +1719,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>@types/express</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
