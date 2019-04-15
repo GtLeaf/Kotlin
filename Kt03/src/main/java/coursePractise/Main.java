@@ -4,8 +4,9 @@ public class Main {
     public static void main(String[] args){
         Solve solve = new Solve();
         long startTime = System.currentTimeMillis();
-        solve.solveCutCoin5(new int[]{3,5,7,8,9,10,11}, 500);
+//        System.out.println(solve.codeCutCoin6(new int[]{1,2}, 43));
 //        solve.solveCutCoin4(new int[]{1,2,5}, 10);
+        solve.solveCutCoin4(new int[]{1,2}, 43);
         System.out.println(System.currentTimeMillis() - startTime);
     }
 }
@@ -74,11 +75,11 @@ class Solve{
     }
 
     //动态规划
-    public void solveCutCoin3(int[] coinArr, int aim){
+    public void solveCutCoin5(int[] coinArr, int aim){
         int[][] counts = new int[coinArr.length][aim+1];
-        System.out.println(codeCutCoin3(coinArr, coinArr.length-1, aim, counts));
+        System.out.println(codeCutCoin5(coinArr, coinArr.length-1, aim, counts));
     }
-    public int codeCutCoin3(int[] coins, int index, int amount, int[][] counts){
+    public int codeCutCoin5(int[] coins, int index, int amount, int[][] counts){
         //baseCase
         if (0 == amount){
             return 1;
@@ -87,10 +88,12 @@ class Solve{
             return 0;
         }
         if (0 == counts[index][amount]){
-            counts[index][amount] = codeCutCoin3(coins, index-1, amount, counts)
-                    + codeCutCoin3(coins, index, amount - coins[index], counts);
+            int res = codeCutCoin5(coins, index-1, amount, counts)
+                    + codeCutCoin5(coins, index, amount - coins[index], counts);
+            counts[index][amount] = (0 == res) ? -1 : res;
         }
-        return counts[index][amount];
+//        System.out.println(index + ","+ amount + "," + counts[index][amount]);
+        return -1 == counts[index][amount] ? 0 : counts[index][amount];
     }
 
     //动态规划2 空间复杂度优化
@@ -151,27 +154,21 @@ class Solve{
         return counts[amount];
     }
 
-    //动态规划
-    public void solveCutCoin5(int[] coinArr, int aim){
-        int[][] counts = new int[coinArr.length][aim+1];
-        System.out.println(codeCutCoin5(coinArr, coinArr.length-1, aim, counts));
+    //大神法
+
+    public int codeCutCoin6(int[] coins, int amount){
+        int[] dPAmount = new int[amount+1];
+        dPAmount[0] = 1;
+        for (int i=0; i<coins.length; i++){
+            for (int j= coins[i]; j<amount+1; j++){
+                dPAmount[j] += dPAmount[j - coins[i]];
+            }
+        }
+
+        return dPAmount[amount];
     }
-    public int codeCutCoin5(int[] coins, int index, int amount, int[][] counts){
-        //baseCase
-        if (0 == amount){
-            return 1;
-        }
-        if (index < 0 || amount < 0){
-            return 0;
-        }
-        if (0 == counts[index][amount]){
-            int res = codeCutCoin5(coins, index-1, amount, counts)
-                    + codeCutCoin5(coins, index, amount - coins[index], counts);
-            counts[index][amount] = (0 == res) ? -1 : res;
-        }
-//        System.out.println(index + ","+ amount + "," + counts[index][amount]);
-        return -1 == counts[index][amount] ? 0 : counts[index][amount];
-    }
+
+
 }
 
 

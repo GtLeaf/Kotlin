@@ -1,22 +1,28 @@
 package designPattern.proxyPattern
 
-import java.lang.reflect.InvocationHandler
-import java.lang.reflect.Method
 import java.lang.reflect.Proxy
-import java.util.*
-import kotlin.collections.ArrayList
+
 
 interface ISinger{
     fun sing()
+    fun dance(dance:String)
 }
 
 class Singer : ISinger{
+    override fun dance(dance:String) {
+        println("跳$dance")
+    }
+
     override fun sing() {
         println("singing《My Heart Will Go On》")
     }
 }
 
 class ProxySinger1(private val singer: Singer) : ISinger{
+    override fun dance(dance:String) {
+
+    }
+
     //对唱歌功能的拓展
     override fun sing() {
         println("hello everyone!")
@@ -43,11 +49,11 @@ class DynamicProxy {
             //执行目标对象方法
             val myArg = Array< Any>(10, {})
             val returnValue = method?.invoke(singer, *(args ?: emptyArray())) ?: Unit
-            println("Thanks for listening")
+            println("Thanks for everyOne")
             returnValue
             //                        return singer
         } as ISinger
-        proxy.sing()
+        proxy.dance("四小天鹅")
     }
 }
 

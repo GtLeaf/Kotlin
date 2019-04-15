@@ -1,4 +1,4 @@
-package JVMTest;
+package Test;
 
 public class JVMTest {
 
